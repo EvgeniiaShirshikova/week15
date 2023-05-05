@@ -31,6 +31,7 @@ let updateTaskList = () => {
   //создаем чекбокс
   const checkBox = document.createElement('input');
   checkBox.type = "checkbox";
+  checkBox.classList.add('checkBox');
   listElement.append(checkBox);
 
   //удалаем параграф нет задач
