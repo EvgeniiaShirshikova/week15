@@ -39,17 +39,23 @@ let updateTaskList = () => {
   form.reset();
 }
 
-//создаем функций для очистка списка задач
-let cleanTaskList = () => {
-  gg
-}
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
   updateTaskList();
 });
 
-form.addEventListener
+
+//создаем функций для очистка списка задач
+let cleanTaskList = () => {
+  //очищаем массив
+  tasks.length = 0;
+
+  //очищаем список задач
+  listArea.innerHTML = '';
+}
+
+buttonClean.addEventListener('click', cleanTaskList);
 
 
 
