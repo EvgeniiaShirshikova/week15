@@ -5,6 +5,7 @@ const buttonAdd = document.getElementById('btnadd');
 const listArea = document.getElementById('listarea');
 const textNoTasks = document.getElementById('notasks');
 const buttonClean = document.getElementById('btnclean');
+buttonClean.setAttribute('disabled', true);
 
 // функция для обновления списка задач
 let updateTaskList = () => {
@@ -37,25 +38,36 @@ let updateTaskList = () => {
 
   //очищаем форму
   form.reset();
+
+  //деламе активной кнопку очистки списка задач
+  buttonClean.removeAttribute('disabled');
 }
 
-
+//ивентлистенер на сабмит формы
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
   updateTaskList();
 });
 
 
-//создаем функций для очистка списка задач
+//создаем функцию для очистка списка задач
 let cleanTaskList = () => {
   //очищаем массив
   tasks.length = 0;
 
   //очищаем список задач
   listArea.innerHTML = '';
+
+  //делаем неактивной кнопку очистки списка задач
+  buttonClean.setAttribute('disabled', true);
+
+  //показываем параграф нет задач
+  listArea.append(textNoTasks);
 }
 
+//ивентлистенер на кнопку очистки списка задач
 buttonClean.addEventListener('click', cleanTaskList);
+
 
 
 
