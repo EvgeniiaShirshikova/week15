@@ -1,7 +1,26 @@
 const tasks = [];
-let form = document.querySelector('form');
-let task = document.getElementById('task').value;
-let buttonAdd = document.getElementById('btnadd');
-let title = document.querySelector('h2');
-let p = document.querySelector('p');
-let buttonClean = document.getElementById('btnclean');
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const buttonAdd = document.getElementById('btnadd');
+const title = document.querySelector('h2');
+const p = document.querySelector('p');
+const buttonClean = document.getElementById('btnclean');
+
+// функция для обновления списка задач
+let updateTaskList = () => {
+  //присваиваем переменную для задачи, введенной в инпут
+  let task = taskInput.value;
+  //добавляем задачу в массив
+	tasks.push(task);
+  tasks.forEach(function (task) {
+    
+  })
+}
+
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
+  updateTaskList();
+});
+
+
+
