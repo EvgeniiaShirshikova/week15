@@ -39,7 +39,7 @@ let updateTaskList = () => {
   //очищаем форму
   form.reset();
 
-  //деламе активной кнопку очистки списка задач
+  //делаем активной кнопку очистки списка задач
   buttonClean.removeAttribute('disabled');
 }
 
