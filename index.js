@@ -1,11 +1,9 @@
 const tasks = [];
 const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
-const buttonAdd = document.getElementById('btnadd');
 const listArea = document.getElementById('listarea');
 const textNoTasks = document.getElementById('notasks');
 const buttonClean = document.getElementById('btnclean');
-buttonClean.setAttribute('disabled', true);
 
 // функция для обновления списка задач
 let updateTaskList = () => {
